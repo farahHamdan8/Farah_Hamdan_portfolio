@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Cairo:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink-900 dark:bg-ink-950 dark:text-mist-200 font-body antialiased transition-colors duration-300;
+}
+
+html[lang='ar'] body {
+  @apply font-arabic;
+}
+
+::selection {
+  @apply bg-neon/30 text-ink-950;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-neon-dim/50 rounded-full;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-12;
+  }
+
+  .section-heading {
+    @apply font-display text-3xl sm:text-4xl font-semibold tracking-tight text-ink-900 dark:text-white;
+  }
+
+  .section-kicker {
+    @apply text-sm font-medium uppercase tracking-[0.2em] text-neon-dim dark:text-neon;
+  }
+
+  .neon-outline-btn {
+    @apply inline-flex items-center gap-2 rounded-full border border-neon-dim/60 px-6 py-3 text-sm font-medium text-ink-900 dark:text-white transition-all duration-300 hover:border-neon hover:shadow-glow;
+  }
+
+  .solid-btn {
+    @apply inline-flex items-center gap-2 rounded-full bg-ink-900 dark:bg-neon px-6 py-3 text-sm font-medium text-white dark:text-ink-950 transition-all duration-300 hover:opacity-90 hover:shadow-glow;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-black/5 dark:border-white/10 bg-white/70 dark:bg-ink-800/60 backdrop-blur-sm shadow-card;
+  }
+}
