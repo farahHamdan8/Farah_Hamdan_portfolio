@@ -1,14 +1,13 @@
 import { createContext, useContext, useState, type ReactNode } from 'react';
-import { translations } from '../i18n/translations';
+import { translations, type Translations } from '../i18n/translations';
 import type { Language } from '../types';
 
 interface LanguageContextValue {
   language: Language;
   dir: 'ltr' | 'rtl';
   toggleLanguage: () => void;
-  t: typeof translations.en;
+  t: Translations;
 }
-
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }): JSX.Element {

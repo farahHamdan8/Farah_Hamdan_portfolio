@@ -1,4 +1,58 @@
-export const translations = {
+import type { Language } from '../types';
+
+export interface Translations {
+  nav: { brand: string; about: string; projects: string; contact: string; cta: string };
+  hero: {
+    kicker: string;
+    titleLine1: string;
+    titleHighlight: string;
+    bio: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    badgeLabel: string;
+    badgeValue: string;
+  };
+  about: {
+    kicker: string;
+    title: string;
+    bio: string;
+    timeline: {
+      eduTitle: string;
+      eduSubtitle: string;
+      cert1Title: string;
+      cert1Subtitle: string;
+      cert2Title: string;
+      cert2Subtitle: string;
+      cert3Title: string;
+      cert3Subtitle: string;
+      ongoing: string;
+    };
+  };
+  projects: {
+    kicker: string;
+    title: string;
+    searchPlaceholder: string;
+    allTag: string;
+    live: string;
+    code: string;
+    noResults: string;
+  };
+  contact: {
+    kicker: string;
+    title: string;
+    description: string;
+    nameLabel: string;
+    emailLabel: string;
+    messageLabel: string;
+    send: string;
+    sending: string;
+    sent: string;
+    error: string;
+  };
+  footer: { rights: string };
+}
+
+export const translations: Record<Language, Translations> = {
   en: {
     nav: { brand: 'Farah Hamdan', about: 'About', projects: 'Projects', contact: 'Contact', cta: "Let's Talk" },
     hero: {
@@ -101,4 +155,4 @@ export const translations = {
     },
     footer: { rights: 'جميع الحقوق محفوظة.' },
   },
-} as const;
+};

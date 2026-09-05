@@ -8,7 +8,11 @@ const NAV_KEYS = ['about', 'projects', 'contact'] as const;
 
 export default function Navbar(): JSX.Element {
   const { theme, toggleTheme } = useTheme();
-  const { language, toggleLanguage, t } = useLanguage();
+
+git add .
+git commit -m "Updated colors and styling"
+git push  const { toggleLanguage, t } = useLanguage();
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -25,11 +29,10 @@ export default function Navbar(): JSX.Element {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'border-b border-black/5 bg-white/80 backdrop-blur-md dark:border-white/5 dark:bg-ink-950/80'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <nav className="section-shell flex h-20 items-center justify-between">
         <a href="#home" className="flex items-center gap-2 font-display text-lg font-semibold">
