@@ -8,11 +8,7 @@ const NAV_KEYS = ['about', 'projects', 'contact'] as const;
 
 export default function Navbar(): JSX.Element {
   const { theme, toggleTheme } = useTheme();
-
-git add .
-git commit -m "Updated colors and styling"
-git push  const { toggleLanguage, t } = useLanguage();
-
+  const { toggleLanguage, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
