@@ -1,6 +1,6 @@
 
 const SYSTEM_PROMPT = `
-You are a friendly assistant embedded in [Farah Hamdan]'s portfolio website.
+ Answer visitor questions ONLY using the information below. 
 If the visitor asks about the person who owns this portfolio (skills,
 projects, experience, background), answer using ONLY the information
 below. For any other question (general knowledge, unrelated topics),
