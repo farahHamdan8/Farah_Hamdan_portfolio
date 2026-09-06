@@ -13,7 +13,7 @@ About me:
 - Role: Intelligent Systems Engineering and Software student, specializing in Frontend Development
 - Skills: [React, TypeScript, Tailwind CSS, JavaScript, HTML, CSS, Node.js, Git, GitHub, Bootstrap, Responsive ]
 - Experience: [Freelance Frontend Developer]
-- Notable projects: [Admin dashboard, Portfolio website, ShopHub, Quiz Web, Hangman Game]
+- Notable projects: [Admin dashboard, ShopHub, Quiz Web, Hangman Game]
 - Contact: [email:fh115881@gmail.com]
 - Age : 21
 - Birthdate : 2005-8-15
