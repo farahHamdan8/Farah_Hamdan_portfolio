@@ -21,6 +21,7 @@ export default {
           DEFAULT: '#e1bee7',
           soft: '#edd8f1',
           dim: '#8e5a9c',
+          lilac: { DEFAULT: '#e1bee7', dim: '#c896d1' }
         },
       },
       fontFamily: {
@@ -31,6 +32,7 @@ export default {
       boxShadow: {
         glow: '0 0 40px -10px rgba(225, 190, 231, 0.35)',
         card: '0 8px 30px -12px rgba(0,0,0,0.45)',
+        'glow-lilac' : '0 0 30px -8px rgba(225, 190, 231, 0.55 )',
       },
       backgroundImage: {
         grid: 'linear-gradient(rgba(148,163,184,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.06) 1px, transparent 1px)',
