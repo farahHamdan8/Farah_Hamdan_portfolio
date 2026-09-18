@@ -35,8 +35,9 @@ function AppShell(): JSX.Element {
         <Navbar />
         <main>
           <Hero />
-          <About />
+          
           <Projects />
+          <About />
           <Contact />
         </main>
         <Footer />

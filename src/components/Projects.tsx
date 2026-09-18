@@ -7,31 +7,44 @@ import type { Project } from '../types';
 const projects: Project[] = [
   {
     id: 'p1',
+    title: 'Zaytoun-restaurant',
+    image:'./res.png',
+    description: 'A luxury bilingual restaurant web app with an interactive menu, filtering, and cart ordering flow..',
+    tags: ['React','Vit' ,'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
+    liveUrl: 'https://zaytoun-restaurant-vert.vercel.app/',
+    repoUrl: 'https://github.com/farahHamdan8/zaytoun-restaurant',
+  },
+  {
+    id: 'p2',
     title: 'Admin Dashboard',
+    image:'./admin.png',
     description: 'A real-time analytics dashboard with customizable widgets and role-based access.',
     tags: ['React','Vit' ,'JavaScript', 'Nivo', 'Tailwind CSS', 'Material UI'],
     liveUrl: 'https://dashboard-fuvz.vercel.app/',
     repoUrl: 'https://github.com/farahHamdan8/Dashboard',
   },
   {
-    id: 'p2',
+    id: 'p3',
     title: 'ShopHub',
+    image:'./shop.png',
     description: 'Collaborative trip planning app with drag-and-drop itineraries and offline sync.',
     tags: ['React', 'Vit', 'Context API', 'JavaScript', 'Tailwind CSS'],
     liveUrl: 'https://shop-hub-mu-ten.vercel.app/',
     repoUrl: 'https://github.com/farahHamdan8/ShopHub',
   },
   {
-    id: 'p3',
+    id: 'p4',
     title: 'Quiz_Web',
+    image:'./quiz.png',
     description: 'Browser-based sprite editor with layers, onion-skinning, and export to GIF.',
     tags: ['HTML', 'JavaScript', 'CSS'],
     liveUrl: 'https://farahhamdan8.github.io/Quiz_Web/',
     repoUrl: 'https://github.com/farahHamdan8/Quiz_Web',
   },
   {
-    id: 'p4',
+    id: 'p5',
     title: 'Hangman Game',
+    image:'./hang.png',
     description: 'E-commerce storefront with a headless CMS and Stripe checkout integration.',
     tags: ['HTML', 'JavaScript', 'CSS'],
     liveUrl: 'https://farahhamdan8.github.io/MyGames/',
@@ -121,6 +134,11 @@ export default function Projects(): JSX.Element {
               className="glass-card group flex flex-col justify-between p-6"
             >
               <div>
+              <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-50 w-full rounded-md object-cover mb-4"
+                />
                 <h3 className="font-display text-lg font-semibold text-ink-900 dark:text-white">
                   {project.title}
                 </h3>
