@@ -18,17 +18,26 @@ export default function Navbar(): JSX.Element {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // تعديل الدالة لضمان الانتقال للقسم قبل أو مع إغلاق القائمة
   const handleNavClick = (id: string) => {
     setIsOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    
+    // استخدام setTimeout بسيط لضمان تنفيذ Scroll بشكل موثوق بعد بدء إغلاق القائمة
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
           ? 'border-b border-black/5 bg-white/80 backdrop-blur-md dark:border-white/5 dark:bg-ink-950/80'
           : 'bg-transparent'
-        }`}
+      }`}
     >
       <nav className="section-shell flex h-20 items-center justify-between">
         <a href="#home" className="flex items-center gap-2 font-display text-lg font-semibold">
@@ -41,6 +50,7 @@ export default function Navbar(): JSX.Element {
           </span>
         </a>
 
+        {/* Desktop Navigation */}
         <div className="hidden items-center gap-10 md:flex">
           {NAV_KEYS.map((key) => (
             <button
@@ -84,6 +94,7 @@ export default function Navbar(): JSX.Element {
           </button>
         </div>
 
+        {/* Mobile Toggle Button */}
         <button
           className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 dark:border-white/10 md:hidden"
           onClick={() => setIsOpen((v) => !v)}
@@ -93,6 +104,7 @@ export default function Navbar(): JSX.Element {
         </button>
       </nav>
 
+      {/* Mobile Navigation Drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -106,8 +118,9 @@ export default function Navbar(): JSX.Element {
               {NAV_KEYS.map((key) => (
                 <button
                   key={key}
+                  type="button"
                   onClick={() => handleNavClick(key)}
-                  className="text-start text-sm font-medium text-ink-700 dark:text-mist-300"
+                  className="w-full text-start text-sm font-medium text-ink-700 dark:text-mist-300 py-1"
                 >
                   {t.nav[key]}
                 </button>
@@ -125,7 +138,10 @@ export default function Navbar(): JSX.Element {
                 >
                   {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
                 </button>
-                <button onClick={() => handleNavClick('contact')} className="solid-btn !py-2.5 !px-5 text-sm flex-1 justify-center">
+                <button 
+                  onClick={() => handleNavClick('contact')} 
+                  className="solid-btn !py-2.5 !px-5 text-sm flex-1 justify-center"
+                >
                   {t.nav.cta}
                 </button>
               </div>
