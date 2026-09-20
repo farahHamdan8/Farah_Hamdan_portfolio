@@ -7,6 +7,24 @@ import type { Project } from '../types';
 const projects: Project[] = [
   {
     id: 'p1',
+    title: '3atik Store',
+    image:'./atik.png',
+    description: 'A luxury bilingual restaurant web app with an interactive menu, filtering, and cart ordering flow..',
+    tags: ['React','Vit' ,'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
+    liveUrl: 'https://3atik.vercel.app/',
+    repoUrl: 'https://github.com/farahHamdan8/3atik',
+  },
+  {
+    id: 'p2',
+    title: 'Farasha Store',
+    image:'./farasha.png',
+    description: 'A luxury bilingual restaurant web app with an interactive menu, filtering, and cart ordering flow..',
+    tags: ['HTML','JavaScript' ,'CSS', 'Framer Motion', 'Responsive Design'],
+    liveUrl: 'https://farasha-eta.vercel.app/',
+    repoUrl: 'https://github.com/farahHamdan8/farasha',
+  },
+  {
+    id: 'p3',
     title: 'Zaytoun-restaurant',
     image:'./res.png',
     description: 'A luxury bilingual restaurant web app with an interactive menu, filtering, and cart ordering flow..',
@@ -15,7 +33,7 @@ const projects: Project[] = [
     repoUrl: 'https://github.com/farahHamdan8/zaytoun-restaurant',
   },
   {
-    id: 'p2',
+    id: 'p4',
     title: 'Admin Dashboard',
     image:'./admin.png',
     description: 'A real-time analytics dashboard with customizable widgets and role-based access.',
@@ -24,7 +42,7 @@ const projects: Project[] = [
     repoUrl: 'https://github.com/farahHamdan8/Dashboard',
   },
   {
-    id: 'p3',
+    id: 'p5',
     title: 'ShopHub',
     image:'./shop.png',
     description: 'Collaborative trip planning app with drag-and-drop itineraries and offline sync.',
@@ -33,7 +51,7 @@ const projects: Project[] = [
     repoUrl: 'https://github.com/farahHamdan8/ShopHub',
   },
   {
-    id: 'p4',
+    id: 'p6',
     title: 'Quiz_Web',
     image:'./quiz.png',
     description: 'Browser-based sprite editor with layers, onion-skinning, and export to GIF.',
@@ -42,7 +60,7 @@ const projects: Project[] = [
     repoUrl: 'https://github.com/farahHamdan8/Quiz_Web',
   },
   {
-    id: 'p5',
+    id: 'p7',
     title: 'Hangman Game',
     image:'./hang.png',
     description: 'E-commerce storefront with a headless CMS and Stripe checkout integration.',
